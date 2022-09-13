@@ -1,0 +1,20 @@
+---
+
+
+- name: download rustup script
+  ansible.builtin.get_url:
+    url: https://sh.rustup.rs
+    dest: ~/Downloads/rustup-init.sh
+    mode: '0744'
+
+
+- name: install rust via rustup
+  ansible.builtin.script:
+    cmd: ~/Downloads/rustup-init.sh -y --no-modify-path
+
+- name: install cli tools packages via cargo
+  community.general.cargo:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('latest') }}"
+    version: "{{ item.version | default(omit) }}"
+  loop: "{{ cargo_packages }}"
