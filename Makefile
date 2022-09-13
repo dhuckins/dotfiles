@@ -1,3 +1,4 @@
 
+.PHONY: dotfiles
 dotfiles:  ## install/update dotfiles
-	@rcup -vvv -d "./dotfiles"
+	@rcup -vv -d "./dotfiles"
