@@ -72,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 # User configuration
 
@@ -101,14 +101,44 @@ export EDITOR=vim
 alias zshconfig="$EDITOR ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -f "$HOME/.functions" ]; then
-    source "$HOME/.functions"
-fi
+function source_if_exists() {
+    local -r dotfile="${1:-}"
+    if [ -z "${dotfile}" ]; then
+        echo "source_if_exists requires a dotfile"
+        exit 1
+    fi
+    source "$HOME/.${dotfile}"
+}
 
-if [ -f "$HOME/.path" ]; then
-    source "$HOME/.path"
-fi
+# if [ -f "$HOME/.functions" ]; then
+#     source "$HOME/.functions"
+# fi
 
-if [ -f "$HOME/.aliases" ]; then
-    source "$HOME/.aliases"
-fi
+# if [ -f "$HOME/.path" ]; then
+#     source "$HOME/.path"
+# fi
+
+# if [ -f "$HOME/.aliases" ]; then
+#     source "$HOME/.aliases"
+# fi
+
+# # keep last!
+# if [ -f "$HOME/.init" ]; then
+#     source "$HOME/.init"
+# fi
+
+# keep in order
+files_to_source=(
+    "functions"
+    "path"
+    "aliases"
+    # always last
+    "init"
+)
+
+for file in "${files_to_source[@]}"; do
+    source_if_exists "$file"
+done
+
+unset files_to_source
+unset source_if_exists
