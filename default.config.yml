@@ -1,0 +1,7 @@
+homebrew_installed_packages:
+  - github/gh/gh
+  - go
+  - python@3.10
+  - shellcheck
+  - starship
+  - tree
