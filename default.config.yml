@@ -5,6 +5,7 @@ homebrew_installed_packages:
   - github/gh/gh
   - go
   - libgit2
+  - openjdk
   - openssl
   - procs
   - python@3.10
