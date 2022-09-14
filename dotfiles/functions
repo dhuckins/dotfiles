@@ -87,5 +87,9 @@ function vv() {
 				;;
 		esac
 	done
-	"$python" -m venv "$(pwd)/$directory"
+
+	if [ ! -d "./${directory}" ]; then
+		"$python" -m venv "$(pwd)/$directory"
+	fi
+	source "${directory}/bin/activate"	
 }
