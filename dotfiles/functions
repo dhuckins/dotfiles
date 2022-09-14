@@ -87,5 +87,5 @@ function vv() {
 				;;
 		esac
 	done
-	exec "$python -m venv $(pwd)/$directory"
+	"$python" -m venv "$(pwd)/$directory"
 }
