@@ -33,7 +33,6 @@
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
-	branches = branch --all
 	remotes = remote --verbose
 
 	# List aliases.
