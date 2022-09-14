@@ -1,0 +1,7 @@
+---
+- name: install cli tools packages via cargo
+  community.general.cargo:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('latest') }}"
+    version: "{{ item.version | default(omit) }}"
+  loop: "{{ cargo_packages }}"

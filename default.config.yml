@@ -1,0 +1,18 @@
+homebrew_installed_packages:
+  - cowsay
+  - dust
+  - fd
+  - github/gh/gh
+  - go
+  - libgit2
+  - openssl
+  - procs
+  - python@3.10
+  - shellcheck
+  - starship
+  - tree
+  - zoxide
+
+cargo_packages:
+  - bat
+  - exa
