@@ -69,3 +69,23 @@ if [ ! $(uname -s) = 'Darwin' ]; then
 		alias open='xdg-open';
 	fi
 fi
+
+function vv() {
+	local python="python3.10"
+	local directory=".venv"
+	while [[ $# -gt 0 ]]; do
+		case $1 in
+			-d|--directory)
+				directory="$(pwd)/$2"
+				shift
+				shift
+				;;
+			-p|--python)
+				python="$2"
+				shift
+				shift
+				;;
+		esac
+	done
+	exec "$python -m venv $(pwd)/$directory"
+}
