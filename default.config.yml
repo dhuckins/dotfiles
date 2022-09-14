@@ -10,6 +10,7 @@ homebrew_installed_packages:
   - python@3.10
   - shellcheck
   - starship
+  - thefuck
   - tree
   - zoxide
 
