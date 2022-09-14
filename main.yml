@@ -17,4 +17,5 @@
       tags: ['homebrew']
   
   tasks:
+    - import_tasks: tasks/rust.yml
     - import_tasks: tasks/packages.yml
