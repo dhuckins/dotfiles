@@ -3,3 +3,4 @@ if [ -f "$HOME/.cargo/env" ]; then
 fi
 
 eval "$(starship init zsh)"
+eval $(thefuck --alias)
