@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# make sure python can find lib bindings
+# https://docs.brew.sh/Homebrew-and-Python
+export CFLAGS="-I$(brew --prefix)/include $CFLAGS"
+export LDFLAGS="-L$(brew --prefix)/lib $LDFLAGS"

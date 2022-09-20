@@ -1,3 +1,11 @@
+#!/bin/bash
+
 # path modifiers
 export PATH="$PATH:$HOME/bin"
 export PATH="$(go env GOPATH)/bin:$PATH"
+
+# homebrew versions of python install scripts
+# in /Users/$USER/Library/Python/*/bin
+for pdir in /Users/$USER/Library/Python/*/bin; do
+    export PATH="$pdir:$PATH"
+done

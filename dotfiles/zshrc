@@ -130,6 +130,7 @@ function source_if_exists() {
 # keep in order
 files_to_source=(
     "functions"
+    "exports"
     "path"
     "aliases"
     # always last
