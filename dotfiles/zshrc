@@ -70,7 +70,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    poetry  # https://python-poetry.org/docs/#oh-my-zsh
+)
 
 source "$ZSH/oh-my-zsh.sh"
 
@@ -109,23 +112,6 @@ function source_if_exists() {
     fi
     source "$HOME/.${dotfile}"
 }
-
-# if [ -f "$HOME/.functions" ]; then
-#     source "$HOME/.functions"
-# fi
-
-# if [ -f "$HOME/.path" ]; then
-#     source "$HOME/.path"
-# fi
-
-# if [ -f "$HOME/.aliases" ]; then
-#     source "$HOME/.aliases"
-# fi
-
-# # keep last!
-# if [ -f "$HOME/.init" ]; then
-#     source "$HOME/.init"
-# fi
 
 # keep in order
 files_to_source=(
