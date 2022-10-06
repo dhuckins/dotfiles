@@ -49,3 +49,5 @@ alias path='echo -e ${PATH//:/\\n}'
 
 alias ls='exa'
 
+# override the oh-my-zsh git plugin alias to sign commits
+alias gc='git commit -v -s'
