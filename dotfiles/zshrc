@@ -121,6 +121,7 @@ files_to_source=(
     "exports"
     "path"
     "aliases"
+    "secrets"
     # always last
     "init"
 )
