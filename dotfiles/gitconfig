@@ -125,3 +125,6 @@
 [user]
     name = Daniel Huckins
     email = dhuckins@users.noreply.github.com
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
