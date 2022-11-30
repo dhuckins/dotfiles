@@ -112,7 +112,12 @@ function source_if_exists() {
         echo "source_if_exists requires a dotfile"
         exit 1
     fi
-    source "$HOME/.${dotfile}"
+    
+    local -r filepath="$HOME/.${dotfile}"
+
+    if [ -f "$filepath" ]; then
+        source "$filepath"
+    fi
 }
 
 # keep in order
@@ -122,6 +127,7 @@ files_to_source=(
     "path"
     "aliases"
     "secrets"
+    "extras" # optional, not tracked
     # always last
     "init"
 )
