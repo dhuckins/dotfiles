@@ -4,3 +4,8 @@
 # https://docs.brew.sh/Homebrew-and-Python
 export CFLAGS="-I$(brew --prefix)/include $CFLAGS"
 export LDFLAGS="-L$(brew --prefix)/lib $LDFLAGS"
+
+if command -v gh &> /dev/null
+then
+    export GITHUB_TOKEN="$(gh config get -h github.com oauth_token)"
+fi
