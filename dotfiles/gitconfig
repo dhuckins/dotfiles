@@ -110,8 +110,9 @@
 [init]
   defaultBranch = main
 
-[merge]
-  ff = only
+# breaks repos with squash merge
+# [merge]
+#   ff = only
 
 [push]
   default = current
