@@ -117,10 +117,11 @@
   default = current
 
 [pull]
-	rebase = true
+	rebase = false
 
-[rebase]
-  autosquash = true
+# dont do this! breaks repos w/ squash merge
+# [rebase]
+#   autosquash = true
 
 [user]
     name = Daniel Huckins
