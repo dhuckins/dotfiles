@@ -75,6 +75,7 @@ plugins=(
     poetry  # https://python-poetry.org/docs/#oh-my-zsh
     docker
     golang
+    rust
 )
 
 source "$ZSH/oh-my-zsh.sh"
