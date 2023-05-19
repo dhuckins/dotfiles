@@ -4,3 +4,4 @@
 # https://docs.brew.sh/Homebrew-and-Python
 export CFLAGS="-I$(brew --prefix)/include $CFLAGS"
 export LDFLAGS="-L$(brew --prefix)/lib $LDFLAGS"
+export GOROOT="$(brew --prefix golang)/libexec"
