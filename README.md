@@ -6,3 +6,5 @@ mostly based on
 - [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook)
 
 uses ansible (`brew install ansible`) and [rcm](https://github.com/thoughtbot/rcm) (`brew install rcm`)
+
+test
