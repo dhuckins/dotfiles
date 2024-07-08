@@ -93,3 +93,7 @@ function vv() {
 	fi
 	source "${directory}/bin/activate"	
 }
+
+function newuuid() {
+	uuidgen | tr '[:upper:]' '[:lower:]'
+}
