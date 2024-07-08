@@ -16,3 +16,4 @@ Thumbs.db
 
 go.work
 go.work.sum
+.env
