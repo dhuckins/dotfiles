@@ -4,6 +4,7 @@ fi
 
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
+eval "$(mise activate zsh)"
 
 
 

@@ -137,8 +137,8 @@ done
 
 unset files_to_source
 unset source_if_exists
-export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+
 
 # bun completions
-[ -s "/Users/daniel.huckins/.bun/_bun" ] && source "/Users/daniel.huckins/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 eval "$(mise activate zsh)"
