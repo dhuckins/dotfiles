@@ -137,8 +137,3 @@ done
 
 unset files_to_source
 unset source_if_exists
-
-
-# bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-eval "$(mise activate zsh)"
